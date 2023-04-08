@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>MED</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#Home" class="active">Home</a>
+            <a href="#About">About</a>
+            <!--<a href="#Service">Service</a>-->
+            <!--<a href="#Contact">Contact</a>-->
+        </div>
+    </header>
+    <section class="main" id="Home">
+        <div class="homeimg">
+            <img src="static/images/doctor-tending-patient.jpg" alt="consultation" width="500px">
+        </div>
+        <div class="abt">
+            <h1>MED-CARE</h1>
+            <h5>Changing Lives, Right Here</h5>
+            <h5>Med Health Center offers more access to innovative healthcare.</h5> 
+            <h5>More locations.</h5>
+            <h5>More lives made better. Right here.</h5>
+        </div>
+        <div class="btn">
+            <button onclick="mainfunc()" formaction="/signup" formmethod="post">Create account</button>
+        </div>
+    </section>
+    <section class="foot" id="About">
+        <footer>
+            <div>
+                <h1>Customer Care</h1>
+                <ul>Contact us</ul>
+                <ul>FAQs</ul>
+                <ul>Terms of Services</ul>
+                <ul>Privacy policy</ul>
+                <ul>Terms and Conditions</ul>
+            </div>
+            <div >
+                <h1>Inside MED</h1>
+                <ul>Why MED</ul>
+                <ul>Contact Us</ul>
+                <ul>Offers</ul>
+            </div>
+            <div>
+                <h1>Account</h1>
+                <ul>Sign Up</ul>
+                <ul>My activities</ul>
+            </div>
+            <div class="social">
+                <h1>Follow us</h1>
+                <a id="a"><i class='bx bxl-instagram' id="ins" ></i></a>
+                <a><i class='bx bxl-twitter' ></i></a>
+                <a><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            <div>
+                @2023 MED Consultancy.All Rights Reserved.
+            </div>
+        </footer>
+    </section>
+</body>
+<script>
+    function mainfunc(){
+        location.href="signUp.html";
+    }
+</script>
+<script src="main.js"></script>
+</html>

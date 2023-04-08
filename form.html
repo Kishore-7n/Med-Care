@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+
+
+    body{
+        padding-top:70px;
+    }
+    #form
+    {
+        background-color:black;
+        color:white;
+        width:500px;
+        margin:auto;
+        height:500px;
+        border-radius:10px;
+        padding:80px 20px;
+        box-shadow: 2px 5px 10px rgba(0,0,0,5);
+    }
+    .name{
+        font-size:20px;
+        padding-left:50px;
+        padding-bottom:50px;
+    }
+
+    .name input{
+        width:290px;
+        margin-left:75px;
+        height:30px;
+        text-align: center;
+    }
+
+    .age{
+        font-size:20px;
+        padding-left:50px;
+        padding-bottom:50px;
+    }
+    .age input{
+        width:290px;
+        margin-left:90px;
+        height:30px;
+        text-align: center;
+    }
+    .doctor{
+        font-size:20px;
+        padding-left:50px;
+        padding-bottom:50px;
+    }
+    .doctor select{
+
+        width:295px;
+        margin-left:16px;
+        height:35px;
+        text-align: center;
+        
+    }
+    .contact{
+        font-size:20px;
+        padding-left:50px;
+        padding-bottom:50px;
+    }
+
+    .contact input
+    {
+
+        width:290px;
+        margin-left:60px;
+        height:30px;
+        text-align: center;
+    }
+    .submit{
+        font-size:20px;
+        padding-left:30px;
+        margin-top:50px;
+
+    }
+
+    .submit input{
+        width:300px;
+        margin-left:70px;
+        height:30px;
+        text-align: center;
+    }
+
+
+
+
+</style>
+<body>
+    <form id="form" action="/new" method="post">
+        <div class="name">Name
+                <input type="text" placeholder="Enter your name" name="Name" required>
+        </div>
+        <div class="age">Age
+                <input type="number" placeholder="Enter your age" name="Age" required>
+        </div>
+        <div class="doctor">
+                Select Doctor
+                <select name="Doctor">
+                    <option>Select</option>
+                    <option>Dr.Sandeep Attawar</option>
+                    <option>Dr.Arindam Kar Gupta</option>
+                </select>
+        </div>
+        <div class="contact">
+                Contact
+                <input type="number" placeholder="Enter your number" name="Contact" required>
+        </div>
+        <div class="submit">
+                <input type="submit">
+        </div>
+    </form>
+</body>
+<script src="main.js"></script>
+</html>

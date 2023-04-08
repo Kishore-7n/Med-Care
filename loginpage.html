@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        :root{
+	--bg-color: #ffffff;
+	--text-color: #000;
+	--secound-color: #a09dab;
+	--main-color: #f75023;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+}
+        body{
+            margin:0;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            min-height:100vh;
+            height:100%;
+            width:100%;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position:relative;
+            z-index:-1;
+            display:grid;
+    
+        }
+        #form 
+        {
+            background-color:white;
+            position:fixed;
+            /*max-width:500%;*/
+            border-radius:20px;
+            width:500px;
+            height:450px;
+            margin-left:32%;
+            margin-top:13%;
+            padding: 30px 20px;
+            
+            /*box-shadow: 2px 5px 10px rgba(0,0,0,5);*/
+    
+        }
+        .text h1
+        {
+            position:fixed;
+            margin-top:100px; 
+            font-size:45px;
+            margin-left:45%;
+            text-align:center;
+
+        }
+        .email{
+            padding-left:90px;
+            margin-bottom:50px;
+        }
+        .email input{
+            text-align:center;
+            border:3px black solid;
+            border-radius:5px;
+            width:300px;
+            height:30px;
+            display:flex;
+        }
+
+        .email h3{
+            font-size:30px;
+        }
+        .password{
+            padding-left:90px;
+        }
+        .password input
+        {
+            text-align:center;
+            border:3px black solid;
+            border-radius:5px;
+            display:flex;
+            width:300px;
+            height:30px;
+            
+        }
+        .password h3{
+            font-size:30px;
+        }
+
+        .login{
+            padding-top:80px;
+            padding-left:90px;
+        }
+
+        .login button{
+            border-radius:30px;
+            background-color:#36393B;
+            border: 1px #36393B solid;
+            color:white;
+            font-size:25px;
+            font-weight:500;
+            width:300px;
+            height:40px;
+        }
+
+        @media(max-width:980px)
+        {
+           body
+            {
+                margin:0;
+                background: rgb(238,174,202);
+                background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                background-repeat: no-repeat;
+                min-height:100vh;
+                width:100%;
+                height:100%;
+                background-size:cover;
+                background-position:center;
+                position:relative;
+                display:grid;
+            }
+            #form 
+            {
+                background-color:#ffffff;
+                position:fixed;
+                border-radius:17px ;
+                max-width:50%;
+                width:250px;
+                height:500px;
+                margin-left:28%;
+                margin-top:30%;
+                margin-right:25%;
+                padding:15px 10px;
+                box-shadow: 2px 5px 10px rgba(0,0,0,5);
+            
+            
+            }
+            .text h1
+            {
+                position:fixed;
+                margin-top:60px;
+                font-size:30px;
+                margin-left:45%;
+                text-align:center;
+            }
+            .email
+            {
+                padding-left:20px;
+                
+            }
+            .email input
+            {
+                text-align:center;
+                border:2px solid;
+                border-radius:5px;
+                width:200px;
+                height:30px;
+                display:flex;
+            }
+            .password
+            {
+                padding-left:20px;
+                margin-bottom:25px;
+            }
+            .password input
+            {
+                text-align:center;
+                border:2px solid;
+                border-radius:5px;
+                display:flex;
+                width:200px;
+                height:30px;
+            }
+
+            .login{
+            padding-top:80px;
+            padding-left:25px;
+            }
+
+            .login button
+            {
+                border-radius:30px;
+                background-color:#36393B;
+                border: 1px #36393B solid;
+                color:white;
+                font-size:25px;
+                font-weight:500;
+                width:200px;
+                height:40px;
+            }
+
+
+        
+        }
+            
+ 
+    </style>
+    <body>
+        <div class="text">
+            <h1>Login</h1>
+        </div>
+        <form id="form" name="myForm" action="/doctors.html" method="get" >
+            <div class="email" id="Email"> 
+                <label for="email">
+                    <h3>Email</h3>
+                    <input type="text" name="ename" value="" placeholder="Enter your email" oninput="validate()" required/>
+                    <span id="text"></span>
+                </label>
+            </div>
+            <div class="password">
+                <label for="password" >
+                    <h3>Password</h3>
+                    <input type="password" name="pname" placeholder="Enter your password" value="" oninput="passwordcheck()" required/>
+                    <span id="pass"></span>
+                </label>
+            </div>
+            <div class="login">
+                <button onclick=" return myfunction()"><a href="doctors.html"></a>Login</button>
+            </div>
+        </form>
+    </body>
+    <script type="text/javascript">
+        function validate() 
+        {  
+            let x = document.forms["myForm"]["ename"].value;
+            var text = document.getElementById("text");
+            var pattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
+            if((x.match(pattern)) &&(x!="")) 
+            {
+                text.innerHTML="Valid email";
+                text.style.fontSize="15px";
+                text.style.color="green";
+                text.style.marginLeft="10px";
+                return true;
+            }
+            else
+            {
+                text.innerHTML="*Please enter the Valid email";
+                text.style.fontSize="15px";
+                text.style.color="red";
+                text.style.marginLeft="10px";
+                return false;
+            }
+        }
+    </script>
+    <script>
+        function passwordcheck()
+        {
+            let y = document.forms["myForm"]["pname"].value;
+            var ps = document.getElementById("pass");
+            var num = "12345";
+            if((y==num)&&(y!=""))
+            {
+                ps.innerHTML="Valid password";
+                ps.style.fontSize="15px";
+                ps.style.color="green";
+                ps.style.marginLeft="10px";
+                return true;
+
+            }  
+            else
+            {
+                ps.innerHTML="*Enter valid password";
+                ps.style.fontSize="15px";
+                ps.style.color="red";
+                ps.style.marginLeft="10px";
+                return false;
+            }
+
+        }
+    </script>
+    
+    <script type="text/javascript">
+        function myfunction() 
+        {
+
+            let re = validate()*passwordcheck()
+            if(re == false)
+            {
+            
+                alert("Invalid Email or Password");
+                return false;
+                
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</html>

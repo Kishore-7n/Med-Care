@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUp</title>
+    </head>
+    <style>
+        body{
+            margin:0;
+            min-height:100vh;
+            background: rgb(219,72,240);
+            background: radial-gradient(circle, rgba(219,72,240,1) 13%, rgba(178,148,233,1) 100%);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+            width:100%;
+            height:100%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        .form1{
+            min-height:75vh;
+            width:400px;
+            height:50%;
+            position:fixed;
+            background-color:black;
+            border-radius:20px;
+            border:5px white solid;
+        }
+        .formemail{
+            width:70px;
+            height:100px;
+            padding-top:30px;
+            padding-left:45px;
+            margin-bottom:30px;
+        }
+        .formemail input{
+            text-align:center;
+            border:2px solid;
+            border-radius:5px;
+            width:300px;
+            height:30px;
+            display:flex;
+
+        }
+        .formemail h3{
+            color:white;
+            font-size:30px;
+            font-family:sans-serif;
+            font-weight:500;
+        }
+        .formpwd{
+            width:70px;
+            height:100px;
+            padding-top:30px;
+            padding-left:45px;
+            margin-bottom:30px;
+        }
+        .formpwd input{
+            text-align:center;
+            border:2px solid;
+            border-radius:5px;
+            width:300px;
+            height:30px;
+            display:flex;
+        }
+        .formpwd h3{
+            color:white;
+            font-size:30px;
+            font-family:sans-serif;
+            font-weight:500;
+        }
+        .span h3{
+            padding-top:20px;
+            padding-left:45px;
+            font-size:15px;
+            color:red;
+            
+            font-family:sans-serif;
+            font-weight:500;
+        }
+        .acc{
+            width:350px;
+            height:100px;
+            padding-top:0px;
+        }
+        .acc h3{
+            font-size:20px;
+            color: white;
+            padding-left:90px;
+            font-family:sans-serif;
+            font-weight:500;
+        }
+        .acc a{
+            text-align: center;
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+            padding-left:170px;
+            font-family:sans-serif;
+            font-weight:500;
+        }
+
+        .button{
+            width:100%;
+            padding-left:50px;
+            padding-top:30px;
+        }
+        .button input {
+            border-radius:5px;
+            width:300px;
+            font-size:20px;
+            text-decoration: none;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight:500;
+            border: 5px solid white;
+            background-color:white;
+            color:black;
+        }
+
+        @media(max-width:600px)
+        {
+
+            body
+            {
+
+                margin:0;
+                min-height:100vh;
+                /*background-color:#343F4F;*/
+                background-color: black;
+                background-repeat:no-repeat;
+                background-position:top;
+                width:100%;
+                height:100%;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .form1{
+                min-height:75vh;
+                width:300px;
+                height:50%;
+                border:3px white solid;
+                position:fixed;
+                background-color:black;
+                border-radius:40px;
+                }
+            .formemail{
+                width:90px;
+                height:100px;
+                padding-top:50px;
+                padding-left:20px;
+                margin-bottom:30px;
+            }
+            .formemail input{
+                text-align:center;
+                border:2px solid;
+                border-radius:5px;
+                width:250px;
+                height:30px;
+                display:flex;
+            }
+            .formemail h3{
+                font-size:20px;
+                font-family:sans-serif;
+                font-weight:500;
+            }
+            .formpwd{
+                width:70px;
+                height:100px;
+                padding-top:20px;
+                padding-left: 20px;
+            }
+            .formpwd input{
+                text-align:center;
+                border:2px solid;
+                border-radius:5px;
+                width:250px;
+                height:30px;
+                display:flex;
+            }
+            .formpwd h3{
+                font-size:20px;
+                font-family:sans-serif;
+                font-weight:500;
+            }
+            .span h3
+            {
+                padding-top:10px;
+                padding-left:20px;
+                font-size:15px;
+                color: red;
+                font-family:sans-serif;
+                font-weight:500;
+            }
+            .acc{
+                width:300px;
+                height:100px;
+                padding-top:10px;
+            }
+            .acc h3{
+                font-size:20px;
+                padding-left:30px;
+                font-family:sans-serif;
+                font-weight:500;
+            }
+            .acc a{
+                text-align: center;
+                text-decoration:none;
+                font-size:20px;
+                color:white;
+                padding-left:120px;
+                font-family:sans-serif;
+                font-weight:500;
+            }
+
+            .button
+            {
+                width:300px;
+                padding-left:20px;
+                padding-top:20px;
+            }
+            .button input
+            {
+            
+                border-radius:5px;
+                width:260px;
+                border: 1px solid white;
+                height:40px;
+                font-size:20px;
+                font-family:sans-serif;
+                font-weight:500;
+                background-color:white;
+                color:black;
+            }
+    }
+    </style>
+    <body>
+        <form class="form1" name="signupform" action="/add"  method="post">
+            <div class="formemail">
+                <label for="Email">
+                    <h3>Email</h3>
+                    <input type="email" name="email" placeholder="Enter Your Email"required>
+                </label>
+            </div>
+            <div class="formpwd">
+                <label for="Password">
+                    <h3>Password</h3>
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                </label>
+            </div>
+            <div class="span">
+                <h3>*All field must be filled.</h3>
+            </div>
+            <div class="button">
+                <input type="submit" value="signup">
+            </div>
+            <div class="acc">
+                <h3>Already have an account</h3>
+                <a href="loginpage.html">Login</a>
+            </div>
+        </form>
+    </body>
+    <script src="app.js"></script>
+</html>
