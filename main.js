@@ -8,9 +8,7 @@ app.use('/static', express.static('static'));
 
 
 // req and res
-app.use("/",(req,res)=>{
-    res.sendFile(__dirname + "/landing.html");
-});
+
 
 
 app.get("/signUp.html",(req,res)=>{
@@ -28,6 +26,10 @@ app.get("/profile.html",(req,res)=>{
 
 app.get("/form.html" ,(req,res)=>{
     res.sendFile(__dirname + "/form.html");
+});
+
+app.use("/",(req,res)=>{
+    res.sendFile(__dirname + "/landing.html");
 });
 
 /*app.get("/loginpage.html",(req,res)=>{
